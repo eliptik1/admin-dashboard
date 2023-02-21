@@ -1,3 +1,9 @@
+:root {
+    --main-bg: rgb(201, 212, 231);
+    --gray-1: rgb(241, 241, 241);
+    --gray-2: rgb(92, 87, 84);
+    --sidebar: rgb(105, 185, 255);
+}
 * {
     padding: 0;
     margin: 0;
@@ -20,11 +26,30 @@ body {
     grid-template-columns: auto;
     grid-template-rows: 1fr 1fr;
     align-items: center;
+    background-color: var(--gray-1);
 }
 .header-top, .header-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.search-bar > label {
+    display: flex;
+    align-items: center;
+}
+input[id="search"] {
+    border: 0;
+    outline-color: rgb(43, 43, 55);
+    background-color: var(--main-bg);
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5rem;
+    width: min(80%, 700px);
 }
 .header-bottom .buttons {
     display: flex;
@@ -35,7 +60,7 @@ body {
     padding: 2rem;
     grid-column: 1/2;
     grid-row: 1/3;
-    background-color: rgb(105, 185, 255);
+    background-color: var(--sidebar);
     font-size: 2rem;
     font-weight: bold;
     color: white;
@@ -54,8 +79,10 @@ body {
     font-size: 1.8rem;
     margin-bottom: 2rem;
 }
-.sidebar img {
+img {
     height: 1.8rem;
+}
+.sidebar img {
     filter: invert(1); /* Invert svg images' colors */
 }
 .nav :first-child {
@@ -69,15 +96,18 @@ body {
     padding: 2rem;
     grid-column: 2/3;
     grid-row: 2/3;
-    background-color: rgb(201, 212, 231);
+    background-color: var(--main-bg);
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: min-content 1fr;
     gap: 2rem;
 }
+.main p {
+    color: var(--gray-2);
+}
 .card {
     padding: 2rem;
-    background-color: rgb(241, 241, 241);
+    background-color: var(--gray-1);
 }
 .projects-container {
     grid-column: 1/2;
