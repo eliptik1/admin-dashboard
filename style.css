@@ -3,6 +3,7 @@
     --gray-1: rgb(241, 241, 241);
     --gray-2: rgb(92, 87, 84);
     --sidebar: rgb(105, 185, 255);
+    --card-border: rgb(254, 103, 21);
 }
 * {
     box-sizing: border-box;
@@ -19,6 +20,7 @@ body {
     height: 100svh;
 }
 
+/* Header section */
 .header {
     padding: 1rem 2rem;
     grid-column: 2/3;
@@ -38,6 +40,7 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
+    gap: 1rem;
 }
 .search-bar > label {
     display: flex;
@@ -50,7 +53,8 @@ input[id="search"] {
     padding: 0.5rem;
     font-size: 1rem;
     border-radius: 5rem;
-    width: min(80%, 700px);
+    width: min(80%, 600px);
+    height: 40px;
 }
 .profile-bar {
     display: flex;
@@ -98,6 +102,7 @@ input[id="search"] {
     font-weight: bold;
 }
 
+/* Sidebar section */
 .sidebar {
     padding: 2rem;
     grid-column: 1/2;
@@ -134,6 +139,7 @@ img {
     margin-top: 2rem;
 }
 
+/* Main section */
 .main {
     padding: 2rem;
     grid-column: 2/3;
@@ -144,16 +150,22 @@ img {
     grid-template-rows: min-content 1fr;
     gap: 2rem;
 }
-.main p {
+.card p {
     color: var(--gray-2);
 }
 .card {
     padding: 2rem;
     background-color: var(--gray-1);
+    border-radius: 0.6rem;
 }
 .projects-container {
     grid-column: 1/2;
     grid-row: 1/3;
+}
+.main > div > p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
 }
 .cards {
     display: grid;
@@ -165,7 +177,44 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-left: 10px solid var(--card-border);
 }
 .card-buttons {
     align-self: flex-end;
+    display: flex;
+    gap: 1.5rem;
+}
+.card-buttons img {
+    height: 1.7rem;
+    filter: invert(34%) sepia(10%) saturate(249%) hue-rotate(339deg) brightness(92%) contrast(88%); /* Change svg color */
+}
+.card-buttons img:hover {
+    filter: invert(0);
+    cursor: pointer;
+}
+.announcements-container div, .trending-container div{
+    font-size: 0.9rem;
+    min-width: 9rem;
+}
+hr {
+    margin: 1rem 0;
+}
+.trending-container .card > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.trending-profile :first-child {
+    font-weight: bold;
+}
+.trending-container img {
+    border-radius: 50%;
+    height: 2.5rem ;
+    width: 2.5rem;
+}
+.user + .user {
+    margin-top: 1.5rem;
+}
+.trending-profile div + div {
+    color: var(--gray-2);
 }
