@@ -156,9 +156,6 @@ img {
 .sidebar img {
     filter: invert(1); /* Invert svg images' colors */
 }
-.settings {
-    
-}
 
 /* Main section */
 .main {
@@ -167,23 +164,33 @@ img {
     grid-row: 2/3;
     background-color: var(--main-bg);
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr auto;
     grid-template-rows: min-content 1fr;
     gap: 2rem;
     overflow: auto;
 }
 .card p {
     color: var(--gray-2);
+    
 }
 .card {
     padding: 2rem;
     background-color: var(--gray-1);
     border-radius: 0.6rem;
-    box-shadow: 3px 3px 10px 0px rgb(0 0 0 / 20%)
+    box-shadow: 3px 3px 10px 0px rgb(0 0 0 / 20%);
+    overflow: hidden;
 }
 .projects-container {
     grid-column: 1/2;
     grid-row: 1/3;
+}
+.announcement-container {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.trending-container {
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
 .main > div > p {
     font-size: 1.3rem;
@@ -192,7 +199,7 @@ img {
 }
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: 250px;
     gap: 2rem;
 }
@@ -216,8 +223,8 @@ img {
     cursor: pointer;
 }
 .announcements-container div, .trending-container div{
+    width: 20rem;
     font-size: 0.9rem;
-    min-width: 9rem;
 }
 hr {
     margin: 1rem 0;
@@ -240,4 +247,7 @@ hr {
 }
 .trending-profile div + div {
     color: var(--gray-2);
+}
+.github-link {
+    margin-top: 1.5rem;
 }
