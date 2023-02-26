@@ -2,8 +2,8 @@
     --main-bg: rgb(201, 212, 231);
     --gray-1: rgb(241, 241, 241);
     --gray-2: rgb(92, 87, 84);
-    --sidebar: rgb(105, 185, 255);
-    --sidebar-2: rgb(68, 166, 252);
+    --sidebar: rgb(33, 115, 187);
+    --sidebar-2: rgb(34, 152, 255);
     --card-border: rgb(254, 103, 21);
 }
 * {
@@ -68,6 +68,10 @@ input[id="search"] {
     width: max-content;
     font-weight: bold;
 }
+.profile-bar .bell_btn:hover {
+    cursor: pointer;
+    scale: 1.07;
+}
 .profile-picture {
     height: 2.5rem;
     border-radius: 50%;
@@ -120,22 +124,14 @@ input[id="search"] {
     color: white;
     z-index: 2;
 }
-/* .sidebar .nav {
-    display: grid;
-    grid-template-columns: 2rem 1fr;
-    grid-template-rows: min-content 1fr;
-    column-gap: 1.2rem;
-    row-gap: 1.4rem;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-} */
-.nav h1 {
+.nav {
+    margin-top: 2rem;
+}
+.sidebar h1 {
     display: flex;
     align-items: center;
     gap: 0.7rem;
     font-size: 1.8rem;
-    margin-bottom: 3rem;
 }
 .nav li {
     list-style: none;
@@ -144,14 +140,15 @@ input[id="search"] {
     align-items: center;
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 1.5rem;
+    padding: 0.75rem 0;
+    cursor: pointer;
 }
-.nav .logo {
+.nav li:hover {
+    scale: 1.05;
+}
+.sidebar .logo {
     height: 2.8rem;
     font-size: 1.8rem;
-}
-.nav li img {
-    height: 1.8rem;
 }
 img {
     height: 1.8rem;
@@ -160,7 +157,7 @@ img {
     filter: invert(1); /* Invert svg images' colors */
 }
 .settings {
-    margin-top: 2rem;
+    
 }
 
 /* Main section */
