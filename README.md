@@ -13,7 +13,7 @@ This is a basic admin dashboard created using HTML and CSS.
 Check out the live demo: [Admin-Dashboard Demo](https://eliptik1.github.io/admin-dashboard/)
 
 ## Screenshots
-![](./assets/dashboard.png)
+![](./Assets/dashboard.png)
 
 ## License
 
